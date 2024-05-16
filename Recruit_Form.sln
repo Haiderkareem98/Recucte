@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruit_Form", "Recruit_Form\Recruit_Form.csproj", "{48EAF6A6-7733-4EA1-B4A7-29D03F37C6C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruit", "Recruit_Form\Recruit.csproj", "{48EAF6A6-7733-4EA1-B4A7-29D03F37C6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
