@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using Recruit.Model;
 using Recruit_Form.Model;
 using System.Data.Common;
 
@@ -13,7 +14,7 @@ namespace Recruit_Form.Data
         }
 
       public DbSet<PersonalInformation>PerInform { get; set; }
-      //  DbSet<Users> Users { get; set; }
+      public DbSet<UserA> Users { get; set; }
 
     }
 }

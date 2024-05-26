@@ -1,4 +1,5 @@
-﻿using Recruit_Form.Form;
+﻿using Recruit.Helper;
+using Recruit_Form.Form;
 
 namespace Recruit_Form.Helper
 {
@@ -6,8 +7,9 @@ namespace Recruit_Form.Helper
     {
 
         public string? Message { get; set; }
+       
 
-      //  public object? Data { get; set; }
+        //  public object? Data { get; set; }
 
         //public bool Error { get; set; }
         //        public PagedResponse(IQueryable<T> Query, PagingForm ClientPaging)

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Recruit_Form.Mapper;
 using Recruit_Form.Model;
 using Microsoft.AspNetCore.Identity;
+using Recruit.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,8 +16,14 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<DbContextApp1>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection")));
 builder.Services.AddScoped<IInformationRepository, RepoInformtoin>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-builder.Services.AddIdentity<AppUsers, IdentityRole>();
+
+// Add Identity services
+
+builder.Services.AddIdentity<AppUsers, IdentityRole>()
+                .AddEntityFrameworkStores<DbContextApp1>()
+                .AddDefaultTokenProviders();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

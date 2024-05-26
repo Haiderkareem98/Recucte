@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Recruit_Form.Data;
 
@@ -11,9 +12,11 @@ using Recruit_Form.Data;
 namespace Recruit_Form.Migrations
 {
     [DbContext(typeof(DbContextApp1))]
-    partial class DbContextApp1ModelSnapshot : ModelSnapshot
+    [Migration("20240518101532_UserA")]
+    partial class UserA
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

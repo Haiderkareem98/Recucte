@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Recruit.Form;
+using Recruit.Model;
 using Recruit_Form.Form;
 using Recruit_Form.Model;
 
@@ -10,6 +12,7 @@ namespace Recruit_Form.Mapper
         {
             CreateMap<RequsteInformation, PersonalInformation>();
             CreateMap<PersonalInformation,RequsteInformation>();
+            CreateMap<RegisterDto, UserA>();
         }
     }
 }

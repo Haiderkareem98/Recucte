@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Recruit.Controllers;
 using Recruit_Form.Form;
 using Recruit_Form.Helper;
 using Recruit_Form.Model;
@@ -12,14 +13,14 @@ namespace Recruit_Form.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class InformationController : ControllerBase
+    public class InformationController(IServiceProvider serviceProvider) : BaseController(serviceProvider)
     {
-        private readonly IInformationRepository _info;
-        public InformationController(IInformationRepository info)
-        {
-            _info = info;
+       // private readonly IInformationRepository _info;
+       //// public InformationController(IInformationRepository info)
+       // {
+       //     _info = info;
 
-        }
+       // }
 
 
         [HttpPost]
